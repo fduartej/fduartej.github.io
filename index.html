@@ -1,5 +1,17 @@
 <html>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcmhMYUAAAAAJNaOqjydgXm7oa-4UZhEfe7QhdV"></script>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+       alert("mensaje");
+    });
+});
+</script>
 <body>
 Hello World
+  <form action="homepage">
+     <input type="text" value=""/> <br/>
+    <input type="submit"/>
+  </form>
 </body>
 </html>
