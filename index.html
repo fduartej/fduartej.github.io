@@ -5,7 +5,7 @@
       <script src="https://www.google.com/recaptcha/api.js?render=6LcmhMYUAAAAAJNaOqjydgXm7oa-4UZhEfe7QhdV"></script>
   </head>
   <body>
-    <h1>Google reCAPTHA Demo 4</h1>
+    <h1>Google reCAPTHA Demo 5</h1>
     <form id="comment_form" action="#" method="post" >
       <input type="email" name="email" placeholder="Type your email" size="40"><br><br>
       <textarea name="comment" rows="8" cols="39"></textarea><br><br>
@@ -26,9 +26,9 @@
                 // add token to form
                 $('#comment_form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
                    // $.post("form.php",{email: email, comment: comment, token: token}, function(result) {
-                            console.log(email);
+                            console.log("email:"+email);
              
-                            if(email === 'fduartej@gmail.com') {
+                            if(email == 'fduartej@gmail.com') {
                                     alert('Thanks for posting comment.')
                             } else {
                                     alert('You are spammer ! Get the @$%K out.')
