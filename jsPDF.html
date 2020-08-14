@@ -1,17 +1,45 @@
 <html>
   <head>
     <title>reCAPTCHA demo: Simple page</title>
-     
-     <script src="https://unpkg.com/jspdf@1.5.3/dist/jspdf.min.js"></script>
+    <script src="https://unpkg.com/jspdf@1.5.3/dist/jspdf.min.js"></script>
     <script type="text/javascript">
-      function pdfOpen(){
-        var doc = new jsPDF('l', 'mm', 'a4',true);
-	alert("Hola");
-      }
+	function generatePDF() {
+		var doc = new jsPDF('p', 'pt', 'a4');
+
+	  doc.fromHTML($('#test').get(0), 20,20, {
+		'width':500
+	  });
+
+	  doc.save('Test.pdf');
+	}
      </script>
   </head>
   <body>
-   Test<br/>
-   <input type="button" value="Open Dialog" />
+ <div id="test">
+  <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+    <tr>
+      <td>Hello</td>
+      <td>I</td>
+      <td>am</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>table</td>
+      <td>.</td>
+    </tr>
+  </table>
+  <h1 style="text-align: center">
+    jsPDF
+  </h1>
+  <p>Though jsPDF can generate a pdf from html, it does not render CSS. Some styling is possible through special directives, though these are limited.</p>
+</div>
+
+<a href="javascript:generatePDF()">Dowload PDF</a>
+  
   </body>
 </html>
