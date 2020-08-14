@@ -3,15 +3,15 @@
     <title>reCAPTCHA demo: Simple page</title>
      
      <script src="https://unpkg.com/jspdf@1.5.3/dist/jspdf.min.js"></script>
-     <script>
+    <script type="text/javascript">
       function pdfOpen(){
         var doc = new jsPDF('l', 'mm', 'a4',true);
+	alert("Hola");
       }
-     </sccript>
+     </script>
   </head>
   <body>
-
-			      <input type="button" value="Open Dialog" onClick="javascript:pdfOpen()">
-
+   Test<br/>
+   <input type="button" value="Open Dialog" />
   </body>
 </html>
