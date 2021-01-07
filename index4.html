@@ -8,7 +8,14 @@
 
 <script>
 function myFunction() {
-  confirm("Press a button!");
+  if (confirm("Press a button?")) {
+    alert("Thanks for press the first button");
+    alert("Thanks for press the second button");
+    return true;
+  } else {
+    return false;
+  }
+  
 }
 </script>
 
