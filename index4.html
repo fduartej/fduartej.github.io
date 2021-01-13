@@ -5,7 +5,7 @@
   </header>
 <body>
 
-<p>Click the button to display a confirm box 7.</p>
+<p>Click the button to display a confirm box 8.</p>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -14,7 +14,13 @@ function myFunction() {
   if (confirm("Desea Grabar el Registro del Titular?")) {
     alert("Titular registrado satisfactoriamente con codigo RUT 1345825\nEn la siguiente ventana ingrese \"Regularizar Datos Facta\"");
      alert("Titular registrado satisfactoriamente con codigo RUT 1345825\nEn la siguiente ventana ingrese \"Regularizar Datos Facta\"");
-    return true;
+    if (confirm("Regularizar Datos Facta? SI/NO" )) {
+      alert("Datos FACTA Reguralizados exitosamente");
+     return true;
+    }else{
+      return false;
+    }
+    
   } else {
     return false;
   }
